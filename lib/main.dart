@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api_app/screens/home.dart';
+import 'package:rest_api_app/screens/home2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'REST API',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.red,
       ),
-      home: const HomeScreen(),
+      home: const HomeScreenTwo(),
     );
   }
 }

@@ -10,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //you have to create your own list if the response doesn't have array name.
   List<UserPostsModel> postList = [];
   @override
   Widget build(BuildContext context) {
@@ -33,20 +34,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   return ListView.builder(
                     itemCount: postList.length,
                     itemBuilder: ((context, index) {
-                      return Card(
-                        shadowColor: Colors.amber,
-                        child: ListTile(
-                          title: Text(
-                            postList[index].title.toString(),
-                            style: const TextStyle(overflow: TextOverflow.fade),
-                          ),
-                          leading: Text(postList[index].id.toString()),
-                          // subtitle: Text(postList[index].body.toString()),
-                          trailing: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.view_array,
-                              color: Colors.amber,
+                      return SizedBox(
+                        height: 60,
+                        child: Card(
+                          shadowColor: Colors.amber,
+                          child: ListTile(
+                            title: Text(
+                              postList[index].title.toString(),
+                              style: const TextStyle(
+                                  overflow: TextOverflow.ellipsis),
+                            ),
+                            leading: Text(postList[index].id.toString()),
+                            // subtitle: Text(postList[index].body.toString()),
+                            trailing: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.view_array,
+                                color: Colors.amber,
+                              ),
                             ),
                           ),
                         ),
