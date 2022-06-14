@@ -1,10 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:rest_api_app/controller/user_list_without_model.dart';
-import 'dart:convert';
-
-import 'package:http/http.dart' as http;
 import 'package:rest_api_app/screens/home3.dart';
 
 class HomeScreen4 extends StatefulWidget {
