@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             child: FutureBuilder(
-              future: UserPostListGenerator().getUserPostsApi(postList),
+              future: getUserPostsApi(postList),
               builder: ((context, snapshot) {
                 //checking if snapshot has data or not
                 if (!snapshot.hasData) {

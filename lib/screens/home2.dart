@@ -20,7 +20,7 @@ class _HomeScreenTwoState extends State<HomeScreenTwo> {
         children: [
           Expanded(
             child: FutureBuilder(
-              future: PhotoList().getPhotos(photosList),
+              future: getPhotos(photosList),
               //by providing data type as AsyncSnapshot<List<Photos>> to snapshot,
               //snapshot will give you access to the model "Photos".
               builder: ((context, AsyncSnapshot<List<Photos>> snapshot) {
