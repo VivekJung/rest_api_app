@@ -86,16 +86,28 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
                 getImage();
               },
               child: Container(
-                color: Colors.lightGreen,
-                height: 60,
-                margin: const EdgeInsets.symmetric(horizontal: 80),
+                color: Colors.purple.shade100,
+                height: 240,
+                margin: const EdgeInsets.symmetric(horizontal: 40),
                 child: image == null
-                    ? const Center(child: Text('Pick an Image'))
+                    ? Center(
+                        child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Card(
+                            elevation: 10,
+                            child: Icon(Icons.image_search_rounded,
+                                size: 100, color: Colors.purple),
+                          ),
+                          Text('Search from gallery'),
+                        ],
+                      ))
                     : Center(
                         child: Image.file(
                           File(image!.path).absolute,
-                          height: 100,
-                          width: 100,
+                          height: 200,
+                          width: 300,
                           fit: BoxFit.cover,
                         ),
                       ),
