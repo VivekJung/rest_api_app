@@ -4,6 +4,7 @@ import 'package:rest_api_app/screens/home2.dart';
 import 'package:rest_api_app/screens/home3.dart';
 import 'package:rest_api_app/screens/home4.dart';
 import 'package:rest_api_app/screens/home5.dart';
+import 'package:rest_api_app/screens/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
       /// webhook.site to make fake apis
       /// https://webhook.site/6b261580-822a-4302-8c39-c3e6d8a4a987 this is current fake api url
       /// nested loop - starting with object and nested to arrays and objects.
-      /// create a model as learnt in home1.dart
-      home: const HomeScreen5(),
+      /// create a model as done in home.dart
+      home: const SignUpScreen(),
     );
   }
 }
