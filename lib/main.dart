@@ -5,6 +5,7 @@ import 'package:rest_api_app/screens/home3.dart';
 import 'package:rest_api_app/screens/home4.dart';
 import 'package:rest_api_app/screens/home5.dart';
 import 'package:rest_api_app/screens/signup.dart';
+import 'package:rest_api_app/screens/upload_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'REST API',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.purple,
       ),
 
       ///tips:
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       /// https://webhook.site/6b261580-822a-4302-8c39-c3e6d8a4a987 this is current fake api url
       /// nested loop - starting with object and nested to arrays and objects.
       /// create a model as done in home.dart
-      home: const SignUpScreen(),
+      home: const UploadImageScreen(),
     );
   }
 }
